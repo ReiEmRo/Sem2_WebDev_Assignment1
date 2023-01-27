@@ -10,6 +10,6 @@ Part B is a single page `HTML` paired with `JavaScript` created to read and calc
 This assignment required us to read and validate user inputs as well as calculating a total amount\
 before printing a receipt at the bottom of the page.
 
-## How to Run
+# How to Run
 You can use any IDE of your choice as long as \
 each project is ran using a live server.
