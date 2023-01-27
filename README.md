@@ -3,7 +3,7 @@
 ## `Part A`
 Part A is a single page `HTML` that basically lists out 3 Canadian Architects biography along with\
 several pictures of their creations.\
-This assignment was our first attempt at playing around with css and image wrapping beteen texts.
+This assignment was our first attempt at playing around with `css` and image wrapping beteen texts.
 
 ## `Part B`
 Part B is a single page `HTML` paired with `JavaScript` created to read and calculate user inputs.\
