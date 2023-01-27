@@ -1,0 +1,86 @@
+
+.headingBorder
+{
+	margin:auto;
+	text-align: center;
+	line-height: 5px;
+	background: rgba(225,227,235,0.8);
+	padding: 25px 80px;
+	box-shadow: 2px 2px 5px;
+}
+
+.bodyBorder
+{
+	background: rgba(225,227,235,0.8);
+	padding: 20px 35px;
+	box-shadow: 2px 2px 5px;
+}
+
+.textWrapLeft
+{
+	float:left;
+	margin: 5px 30px 10px 15px;
+}
+
+.textWrapRight
+{
+	float:right;
+	margin: 5px 0px 10px 15px;
+}
+
+body
+{
+	width: 80%;
+	margin: auto;
+	font-family: 'Fira Sans', sans-serif;
+	background-image: url("img/Background.jpg");
+	/* Background image source: https://in.pinterest.com/pin/678143656370148331/ */
+	background-size: cover;
+}
+
+p::first-letter 
+{
+	font-size: 125%;
+	font-weight: bold;
+}
+
+p
+{
+	margin-top: 5px;
+}
+
+h1
+{
+	font-size: 40px;
+}
+
+h2
+{
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+h3
+{
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+img
+{
+	width: 230px;
+	height: auto;
+	border-radius: 5%;
+}
+
+img:hover
+{
+	transform: scale(1.25);
+	transition: 2s;
+}
+
+figcaption
+{
+	font-size: 90%;
+	text-align: center;
+}

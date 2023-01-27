@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Western Valley Farms Registration Form</title>
+
+	<link rel="stylesheet" type="text/css" href="indexB.css">
+	<script  src="IndexB.js"></script>
+</head>
+
+<body>
+	<div class="border">
+		<div class="header">
+			<h1>Western Valley Farms</h1>
+			<figure>
+				<img src="img/logo.png" alt="logo" style="width: 100px; box-shadow: none;">
+				<!-- Logo src img: https://in.pinterest.com/pin/99360735509337677/ -->
+			</figure>
+			<h3>Today is: <span id="date"></span></h3>
+		</div>
+	</div><br>
+	<div class="border">
+		<br><h2>Enter Customer Information</h2>
+		<form method="POST">
+			<table class="userInfo">
+				<tr>
+					<td><label for="currDate">Current Date: </label></td>
+					<td><input type="date" id="currDate"></td>
+				</tr>
+				<tr>
+					<td><label for="Name">Name: </label></td>
+					<td><input type="text" id="Name" required pattern="[A-Za-z-]"></td>
+				</tr>
+				<tr>
+					<td><label for="address">Street Address: </label></td>
+					<td><input type="text" id="address" required placeholder="123 Dogpark Street"></td>
+				</tr>
+				<tr>
+					<td><label for="postCode">Postal Code: </label></td>
+					<td><input type="text" id="postCode" required 
+						pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="L9L 9L9"></td>
+				</tr>
+				<tr>
+					<td rowspan="2" style="vertical-align: top;">
+						<label for="phone">Phone Number: </label></td>
+					<td><input type="tel" name="phone" id="phone" required 
+						pattern="[0-9]{3}[-][0-9]{3}[-][0-9]{4}" placeholder="123-123-1234"></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="phone" id="homPhone" required>
+						<label for="homPhone">Home Phone</label>
+						<input type="radio" name="phone" id="busPhone">
+						<label for="busPhone">Business Phone</label></td>
+				</tr>
+				<tr>
+					<td><label for="email">Email: </label></td>
+					<td><input type="email" name="email" id="email" placeholder="johnDoe@email.com" 
+						pattern="[A-Za-z0-9._-]+@[a-z0-9.-]+.[a-z]{2,}"></td>
+				</tr>
+				<tr>
+					<td><label>Pick up or Delivery: </label></td>
+					<td><input type="radio" name="PorD" id="pickUp" required value="Pick Up">
+						<label for="pickUp">Pick Up</label>
+						<input type="radio" name="PorD" id="delivery" value="Delivery">
+						<label for="delivery">Delivery</label></td>
+				</tr>
+			</table>
+
+			<hr><br>
+			<h2>Available Food Hampers</h2><br>
+			<table style="border: 1px solid black;">
+				<tr>
+					<th class="hamperInfo">Hamper Name</th>
+					<th class="hamperInfo">Prices</th>
+				</tr>
+				<tr>
+					<td class="hamperInfo">Vegetable Hamper (20kg)</td>
+					<td class="hamperInfo">$30.00</td>
+				</tr>
+				<tr>
+					<td class="hamperInfo">Fruit Hamper (10kg)</td>
+					<td class="hamperInfo">$20.00</td>
+				</tr>
+				<tr>
+					<td class="hamperInfo">Fresh Chicken</td>
+					<td class="hamperInfo">$4/kg</td>
+				</tr>
+				<tr>
+					<td class="hamperInfo">Pork</td>
+					<td class="hamperInfo">$5/kg</td>
+				</tr>
+			</table>
+
+			<table class="selection">
+				<tr>
+					<td>
+						<figure>
+							<img src="img/VegHamp.jpg" alt="Veggie Hamper">
+							<!-- Veggie Hamper img Source: https://macleodorganics.scot/ -->
+							<figcaption>
+							Veggie Hamper: <input type="Number" id="vegAmt" min="0" class="choiceInput"> 
+							</figcaption>
+						</figure>
+					</td>
+					<td>
+						<figure>
+							<img src="img/fruitHamper.jpg" alt="Fruit Hamper">
+							<!-- Fruit hamper src img: https://www.ftd.com/gifts/fruit-basket-delivery -->
+							<figcaption>
+								Fruit Hamper: <input type="Number" id="fruitAmt" min="0" class="choiceInput"> 
+							</figcaption>
+						</figure>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<figure>
+							<img src="img/Chicken.jpg" alt="Chicken">
+							<!-- Chicken source: https://www.gulftoday.ae/lifestyle/2019/05/16/about-that-raw-chicken-we-insist-on-washing -->
+							<figcaption>
+								Chicken: <input type="Number" id="chickAmt" min="0" class="choiceInput">
+							</figcaption>
+						</figure>
+					</td>
+					<td>
+						<figure>
+							<img src="img/pork.jpg" alt="Pork">
+							<!-- Pork img source: https://www.halendas.com/products/pork/ -->
+							<figcaption>
+								Pork: <input type="Number" id="porkAmt" min="0" class="choiceInput"> kg
+							</figcaption> 
+						</figure>
+					</td>
+				</tr>
+			</table>
+			<div style="text-align: center;">
+				<input type="button" value="Confirm Purchase" id="purchaseButton" 
+				class="submitButton" onclick="confirmPurchase();">
+			</div>
+		</form><br>
+		<div id="output" style="display: none">
+			<br><hr><br>
+			<h2>Personal Information</h2>
+			<h4 style="margin-left: 25px; font-size: 18px;">
+				<span id="clientInfo"></span>
+			</h4>
+			<h2>Order Details</h2>
+			<h4 style="margin-left: 25px; font-size: 18px;">
+				<span id="orderDetails"></span>
+			</h4><br>
+		</div>
+	</div>
+</body>
+</html>
