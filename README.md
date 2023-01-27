@@ -12,4 +12,4 @@ before printing a receipt at the bottom of the page.
 
 ## `How to Run`
 You can use any IDE of your choice as long as \
-each project is ran using a live server separately.
+each project is ran using a live server.
